@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NACL</string>
+    <string name="network_error">Whoops! Cannot connect to server....</string>
+</resources>
