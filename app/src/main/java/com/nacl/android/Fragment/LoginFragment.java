@@ -60,7 +60,7 @@ public class LoginFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 if (csrf_token == null)
-                    csrf_token = ((LoginSignupActivity)getActivity()).getToken();
+                    csrf_token = ((LoginSignupActivity)getActivity()).getCsrfToken();
                 try {
                     LoginSignup model = new LoginSignup();
                     /*========================================
@@ -69,7 +69,7 @@ public class LoginFragment extends Fragment{
                             || model.checkLoginPassword(password.getText().toString())))
                         error_section.setText(model.error);
                     else {
-                        network.setUrl("http://192.168.0.4/user/login?");
+                        network.setUrl(Network.getIpaddress()+"/user/login?");
                         network.appendUrlParm("email", email.getText().toString());
                         network.appendUrlParm("password", password.getText().toString());
                         network.appendUrlParm("token", new JSONObject(csrf_token).getString("token"));
@@ -78,8 +78,8 @@ public class LoginFragment extends Fragment{
                         String response = network.get();
                         if (new JSONObject(response).getBoolean("auth")) {
                             Intent intent = new Intent(getActivity(), MainActivity.class);
-                            intent.putExtra("password",password.getText());
-                            intent.putExtra("email",email.getText());
+                            intent.putExtra("token",
+                                    new JSONObject(response).getString("token"));
                             startActivity(intent);
                         } else
                             listener.loadLoginFragment(new JSONObject(response).getString("error"));

@@ -2,6 +2,7 @@ package com.nacl.android.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,6 +23,8 @@ import com.nacl.android.Model.Network;
 import com.nacl.android.R;
 
 import org.json.JSONObject;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class SignupFragment extends Fragment{
     private SignupFragmentListener listener;
@@ -57,7 +60,7 @@ public class SignupFragment extends Fragment{
                             || model.checkPassword(password.getText().toString(),conf_pass.getText().toString())))
                         error.setText(model.error);
                     else {
-                        network.setUrl("http://192.168.0.4/user/signup?");
+                        network.setUrl(Network.getIpaddress()+"/user/signup?");
                         network.appendUrlParm("email", email.getText().toString());
                         network.appendUrlParm("username",username.getText().toString());
                         network.appendUrlParm("password", password.getText().toString());
@@ -66,7 +69,10 @@ public class SignupFragment extends Fragment{
                         network.execute();
                         String response = network.get();
                         if (new JSONObject(response).getBoolean("auth")) {
+
                             Intent intent = new Intent(getActivity(), MainActivity.class);
+                            intent.putExtra("token",
+                                    new JSONObject(response).getString("token"));
                             startActivity(intent);
                         } else
                             listener.loadSignupFragment(new JSONObject(response).getString("error"));

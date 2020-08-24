@@ -13,7 +13,7 @@ public class LoginSignup{
                 error = "Email cannot contain space";
                 return true;
             }else if (!(email.contains("@") && email.contains("."))) {
-                error = "Email must contain . and @ for it to be valid.";
+                error = "Email must contain . and \n @ for it to be valid.";
                 return true;
             }else
                 return false;
@@ -23,7 +23,7 @@ public class LoginSignup{
     public boolean checkUsername(String username){
         error = "Username cannot contain spaces.";
         if (username != null)
-            return (username.contains(" "));
+            return (username.isEmpty() || username.contains(" "));
         else
             return true;
     }
@@ -47,7 +47,7 @@ public class LoginSignup{
                 error = "Password don't match";
                 return true;
             }else if (pass.length() < 8 || conf_pass.length() < 8 ){
-                error = "Password and Confirm password length must be grater than 8 characters";
+                error = "Password and Confirm password length\n must be grater than 8 characters";
                 return true;
             }else
                 return false;
