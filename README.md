@@ -14,4 +14,4 @@ Open Diagram.odp for structure of class and fragments.
 1. Class name should start with caps. Example YourClassName.
 2. Method name should start with small letters. Example yourMethodName()
 3. Variables name should start with small letters following up with dash. Example your_var.
-4. Dont use primitive variables. Like use Long insted of long.  
+4. Try not to use primitive variables. Like use Long insted of long. (Not Mandatory)
