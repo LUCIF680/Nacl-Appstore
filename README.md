@@ -8,3 +8,9 @@ I really dont like how mobile gaming state at the moment for gamers who really w
 4. Edit app/build.gradle for required libraries.
 
 Open Diagram.odp for structure of class and fragments.
+
+## Code 
+1. Class name should start with caps. Example YourClassName.
+2. Method name should start with small letters. Example yourMethodName()
+3. Variables name should start with small letters following up with dash. Example your_var.
+4. Dont use primitive variables. Like use Long insted of long.  
