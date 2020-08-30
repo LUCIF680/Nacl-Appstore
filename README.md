@@ -1,6 +1,6 @@
 # Nacl-Appstore
 App store for non-casual gamers.[DEV]
-I really dont like how mobile gaming state at the moment for gamers who really want to enjoy. Its an app getting created for gamers who are really intrested to help developers and vice versa.
+I really don't like how mobile gaming state at the moment for gamers who really want to enjoy. Its an app getting created for gamers and developers. Intend to build this community better.
 ## Development
 ### Getting Started
 1. Create an empty project.
