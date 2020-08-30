@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_trending">
+
+    <fragment
+        android:id="@+id/nav_trending"
+        android:name="com.nacl.android.Fragment.TrendingFragment"
+        android:label="@string/menu_trending"
+        tools:layout="@layout/fragment_trending" />
+
+    <fragment
+        android:id="@+id/nav_bestseller"
+        android:name="com.nacl.android.Fragment.BestSellerFragment"
+        android:label="@string/menu_best_selling"
+        tools:layout="@layout/fragment_bestseller" />
+
+    <fragment
+        android:id="@+id/nav_action"
+        android:name="com.nacl.android.Fragment.ActionFragment"
+        android:label="@string/menu_action"
+        tools:layout="@layout/fragment_action" />
+</navigation>

@@ -9,7 +9,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -19,12 +18,8 @@ import com.nacl.android.Fragment.SignupFragment;
 import com.nacl.android.Model.Error;
 import com.nacl.android.Model.Network;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
-import java.util.Objects;
-import java.util.concurrent.ExecutionException;
 
 public class LoginSignupActivity extends AppCompatActivity
         implements LoginFragment.LoginFragmentListener,
@@ -42,7 +37,7 @@ public class LoginSignupActivity extends AppCompatActivity
 
         final Snackbar network_error = Snackbar.make(findViewById(R.id.container),
                 R.string.network_error, Snackbar.LENGTH_INDEFINITE);
-        network_error.getView().setBackgroundColor(ContextCompat.getColor(this,R.color.colorAccent));
+        network_error.getView().setBackgroundColor(ContextCompat.getColor(this,R.color.red));
         new Thread() {
             public void run() {
 

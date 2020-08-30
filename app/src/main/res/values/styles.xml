@@ -1,28 +1,12 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/red</item>
+
         <item name="floatingSearch_backgroundColor">@color/colorSearchBackground</item>
-        <item name="floatingSearch_viewSearchInputTextColor">
-            @color/design_default_color_background
-        </item>
-        <item name="floatingSearch_viewSuggestionItemTextColor">
-            @color/design_default_color_background
-        </item>
-        <item name="floatingSearch_hintTextColor">@color/design_default_color_background</item>
-        <item name="floatingSearch_dividerColor">@color/design_default_color_background</item>
-        <item name="floatingSearch_clearBtnColor">@color/design_default_color_background</item>
-        <item name="floatingSearch_leftActionColor">@color/design_default_color_background</item>
-        <item name="floatingSearch_menuItemIconColor">@color/design_default_color_background</item>
-        <item name="floatingSearch_suggestionRightIconColor">
-            @color/design_default_color_background
-        </item>
-        <item name="floatingSearch_actionMenuOverflowColor">@color/design_default_color_background
-        </item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -33,5 +17,7 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
+    <style name="Toolbar.TitleText" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>
