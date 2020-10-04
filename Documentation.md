@@ -1,4 +1,4 @@
-### Version 0.1.0
+### Version 0.2.0
 * Removed AsyncTask as it is deprecated from API 30 onwards.
 * Added Future and Executor
 * Login/Signup is not working 
